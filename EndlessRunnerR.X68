@@ -280,11 +280,11 @@ MENU:
         
         move.l  #WHITE, D1
         move.l  #DEFAULT_FONT, D2                 
-        move.b  #21,D0                          ;set font
+        move.b  #21,D0                           ;set font
         trap    #15
         
         lea        OPTIONS, A1
-        move    #14,D0                            ;Display the NULL terminated string at (A1)
+        move    #14,D0                           ;Display the NULL terminated string at (A1)
         trap    #15
         
         lea        ENTER_NO, A1
@@ -296,7 +296,7 @@ MENU:
         WRITE_EMPTY_LINE
         
         IF.B D1 <NE> #$031 THEN
-            IF.B D1 <EQ> #$032 THEN               ; Author info
+            IF.B D1 <EQ> #$032 THEN               
                 bsr SETIINGS
             ENDI
             IF.B D1 <EQ> #$033 THEN
