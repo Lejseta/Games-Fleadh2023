@@ -418,7 +418,7 @@ APPLY_SCALE MACRO
 	* unpack width/height
 	clr.l 	D0
 	move.w  \2, D0  ; save x to D0
-    clr.w	\2		; clear x part
+        clr.w	\2		; clear x part
 	swap	\2		; set to y
     
 	* multiply by scale
